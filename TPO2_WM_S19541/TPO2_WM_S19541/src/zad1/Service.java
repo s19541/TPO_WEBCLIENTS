@@ -64,8 +64,7 @@ public class Service {
     String getWeather(String city){
         String result = getStringFromUrl(
 
-                "http://api.openweathermap.org/data/2.5/weather?q=" + city.toLowerCase() + ","
-                        + city
+                "http://api.openweathermap.org/data/2.5/weather?q=" + city.toLowerCase()+","+","+getCountryCodeFromName(country)
                         + "&appid=" + API_KEY
         );
         return result;
